@@ -1,6 +1,6 @@
 var BillSplit = {};
 
-BillSplit.addPerson = function(name, colour) {
+BillSplit.addPerson = function(name) {
   var people = localStorage.getItem('people');
   if (!people) {
     people = [];
@@ -9,11 +9,11 @@ BillSplit.addPerson = function(name, colour) {
     people = JSON.parse(people);
     var id = people.length;
   }
-  people.push({"id":id, "name":name, "colour":colour});
+  people.push({"id":id, "name":name});
   localStorage.setItem('people', JSON.stringify(people));
 
   $('#people-list').append(
-      '<li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">' +
+      '<li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#page-edit-person" class="ui-link-inherit">' +
       name +
       '<span id="' +
       id + '-count"' +

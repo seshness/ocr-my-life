@@ -47,24 +47,41 @@
           </span>
         </a>
 		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Edit Person</h1>
-		<a href="#page-items"
-           class="ui-btn-right jqm-home ui-btn ui-btn-up-b ui-btn-icon-notext ui-btn-corner-all ui-shadow"
-           title="Items"
-           data-theme="b">
-		  <span class="ui-btn-inner ui-btn-corner-all">
-			<span class="ui-btn-text">Add Person</span>
-			<span class="ui-icon ui-icon-plus ui-icon-shadow"></span>
-		  </span>
-		</a>
+		<a href="#page-people"
+		   onclick="BillSplit.addPerson($('person_name'))"
+		   class="ui-btn-right ui-btn ui-btn-icon-right ui-btn-corner-all ui-shadow ui-btn-down-b ui-btn-up-b"
+           data-direction="reverse"
+		   data-theme="b">
+          <span class="ui-btn-inner ui-btn-corner-all">
+            <span class="ui-btn-text">Done</span>
+          </span>
+        </a>
 	  </div>
 
       <div data-role="content">
         <div data-role="fieldcontain">
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" value=""  />
+          <input type="text" name="person_name" id="person_name" value=""  />
         </div>
+		
+		<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+			<fieldset data-role="controlgroup" class="ui-corner-all ui-controlgroup ui-controlgroup-vertical">
+				<div role="heading" class="ui-controlgroup-label">Choose which items you ordered:</div>
+				<div class="ui-controlgroup-controls">
+					{% for dict in items_dict %}
+					<div class="ui-checkbox">
+						<input type="checkbox" name={{ forloop.counter }} id={{ forloop.counter }} class="custom"  />
+						<label for={{ forloop.counter }} data-theme="c" class="ui-btn">
+							<div class="ui-btn-text" style="float:left">{{ dict.name }}</div>
+							<span class="ui-icon ui-icon-ui-icon-checkbox-off ui-icon-checkbox-off"></span>
+							<div class="ui-btn-text" style="float:right">{{ dict.amount }}</div>
+						</label>
+					</div>
+					{% endfor %}
+				</div>
+			</fieldset>
+		</div>
       </div>
     </div>
-
   </body>
 </html>
