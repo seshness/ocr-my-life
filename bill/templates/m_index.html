@@ -8,15 +8,17 @@
     <script src="static/js/billsplit.js"></script>
   </head>
   <body>
-    <div data-role="page" id="#people">
+
+    <!-- First view: people -->
+    <div data-role="page" id="page-people">
 	  <div data-role="header" data-theme="b" class="ui-bar-b ui-header" role="banner">
 		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">People</h1>
-		<a href="#editperson"
+		<a href="#page-edit-person"
            data-icon="plus"
            data-iconpos="notext"
-           data-direction="reverse"
            class="ui-btn-right jqm-home ui-btn ui-btn-up-b ui-btn-icon-notext ui-btn-corner-all ui-shadow"
-           title="Add" data-theme="b">
+           title="Add"
+           data-theme="b">
 		  <span class="ui-btn-inner ui-btn-corner-all">
 			<span class="ui-btn-text">Add Person</span>
 			<span class="ui-icon ui-icon-plus ui-icon-shadow"></span>
@@ -25,15 +27,44 @@
 	  </div>
 
       <div data-role="content">
-		<ul data-role="listview" class="ui-listview" id="people-list">
-
-		  <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Outbox <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
-		  <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Drafts <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">4</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
-		  <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-hover-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Sent <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">328</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
-		  <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Trash <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">62</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
-		</ul>
-        
+		<ul data-role="listview" class="ui-listview" id="people-list"></ul>
       </div>
     </div>
+
+
+    <!-- Add person -->
+    <div data-role="page" id="page-edit-person">
+	  <div data-role="header" data-theme="b" class="ui-bar-b ui-header" role="banner">
+        <a href="#page-people"
+           class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-down-b ui-btn-up-b"
+           data-rel="back"
+           data-direction="reverse"
+           data-icon="arrow-l"
+           data-theme="b">
+          <span class="ui-btn-inner ui-btn-corner-all">
+            <span class="ui-btn-text">Back</span>
+            <span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+          </span>
+        </a>
+		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Edit Person</h1>
+		<a href="#page-items"
+           class="ui-btn-right jqm-home ui-btn ui-btn-up-b ui-btn-icon-notext ui-btn-corner-all ui-shadow"
+           title="Items"
+           data-theme="b">
+		  <span class="ui-btn-inner ui-btn-corner-all">
+			<span class="ui-btn-text">Add Person</span>
+			<span class="ui-icon ui-icon-plus ui-icon-shadow"></span>
+		  </span>
+		</a>
+	  </div>
+
+      <div data-role="content">
+        <div data-role="fieldcontain">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" value=""  />
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
