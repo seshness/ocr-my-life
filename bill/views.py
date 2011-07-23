@@ -22,7 +22,7 @@ def mobileBrowser(request):
     ''' Super simple device detection, returns True for mobile devices '''
  
     return True
- '''
+
     mobile_browser = False
     ua = request.META['HTTP_USER_AGENT'].lower()[0:4]
  
@@ -34,7 +34,6 @@ def mobileBrowser(request):
                 mobile_browser = True
  
     return mobile_browser
- '''
  
 def index(request):
     '''Render the index page'''
