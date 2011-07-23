@@ -1,50 +1,34 @@
 <!DOCTYPE html> 
 <html>
   <head>
-    <title>billsplit (mobile)</title>
+    <title>Bill Split</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
     <script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script>
   </head>
   <body>
-	<h1>Hello, mobile user</h1>
     <div data-role="page">
-      <div data-role="header">
-        Page title
-      </div>
+	
+		<div data-role="header" data-theme="b" class="ui-bar-b ui-header" role="banner">
+			<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">People</h1>
+			<a href="../../" data-icon="plus" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home ui-btn ui-btn-up-b ui-btn-icon-notext ui-btn-corner-all ui-shadow" title="Home" data-theme="b">
+				<span class="ui-btn-inner ui-btn-corner-all">
+					<span class="ui-btn-text">Home</span>
+					<span class="ui-icon ui-icon-plus ui-icon-shadow"></span>
+				</span>
+			</a>
+		</div>
+	  
       <div data-role="content">
-
-        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-          <li data-role="list-divider">Overview</li>
-          <li><a href="docs/about/intro.html">Intro to jQuery Mobile</a></li>
-          <li><a href="docs/about/features.html">Features</a></li>
-          <li><a href="docs/about/accessibility.html">Accessibility</a></li>
-          <li><a href="docs/about/platforms.html">Supported platforms</a></li>
-        </ul>
+	  
+		<ul data-role="listview" class=" ui-listview ">
+			<li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Inbox <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">12</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
+			<li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Outbox <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
+			<li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Drafts <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">4</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
+			<li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-hover-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Sent <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">328</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
+			<li data-theme="c" class="ui-btn ui-btn-icon-right ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="index.html" class="ui-link-inherit">Trash <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">62</span></a></div><span class="ui-icon ui-icon-arrow-r"></span></div></li>
+		</ul>
         
-        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-          <li data-role="list-divider">API</li>
-          <li><a href="docs/api/globalconfig.html">Configuring defaults</a></li>
-          <li><a href="docs/api/events.html">Events</a></li>
-          <li><a href="docs/api/methods.html">Methods &amp; Utilities</a></li>
-          <li><a href="docs/api/mediahelpers.html">Responsive Layout</a></li>
-          <li><a href="docs/api/themes.html">Theme framework</a></li>
-        </ul>
-        
-        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-          <li data-role="list-divider">Components</li>
-          <li><a href="docs/pages/index.html">Pages &amp; dialogs</a></li>
-          <li><a href="docs/toolbars/index.html">Toolbars</a></li>
-          <li><a href="docs/buttons/index.html">Buttons</a></li>
-          <li><a href="docs/content/index.html">Content formatting</a></li>
-          <li><a href="docs/forms/index.html">Form elements</a></li>
-          <li><a href="docs/lists/index.html">List views</a></li>
-        </ul>
-        
-        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-          <li data-role="list-divider">Demos</li>
-          <li><a href="experiments/api-viewer/index.html">jQuery API browser</a></li>
-        </ul>
       </div>
     </div>
   </body>
