@@ -1,7 +1,7 @@
 # Some standard Django stuff
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import RequestContext, Context, loader, Template
-from django.shortcuts import render
+from django.shortcuts import render_to_response
  
 # list of mobile User Agents
 mobile_uas = [
@@ -44,9 +44,5 @@ def index(request):
     else:
         t = loader.get_template('index.html')
  
-    #c = Context( { }) # normally your page data would go here
-    c = RequestContext(request, {"name": "ben", "amount": "$0.99"})
-    return HttpResponse(t.render(c), content_type="application/xhtml+xml")
-    #return render_to_response('m_index.html', {"name": "ben", "amount": "$0.99"},
-    #                          context_instance=RequestContext(request))
-    #return HttpResponse(t.render(c))
+    return render_to_response('m_index.html', {"items_dict":[{"name": "pizza", "amount": "$8.99"}, {"name": "breadsticks", "amount": "$4.65"}, {"name": "wings", "amount": "$3.95"}, {"name": "soda", "amount": "$1.99"}]},
+                              context_instance=RequestContext(request))
